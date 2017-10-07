@@ -13,11 +13,8 @@ function Ball(){
             this.x = x;
             this.y = y;
             this.r = r;
-            console.debug(this.r);
             this.b = b;
-            console.debug(this.b);
             this.g = g;
-            console.debug(this.g);
             this.drawn = true;
         }
         noStroke();
