@@ -33,11 +33,11 @@ function draw(){
 	y += 50;
 	on = true;}
 	}
-	else{
-		console.debug(_width, _height);
-        clear();
+
+	else
+	{
+		clear();
+		background(0);
 		ball.show(random(0, _width), random(0, _height), 300, 300, random(0, 255), random(0, 255), random(0, 255));
-		//fill(random(0, 255), random(0, 255), random(0,255), alpha);
-		//ellipse(random(0, 1000), random(0, 1000), 100, 100);
 	}
 }
