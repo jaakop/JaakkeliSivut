@@ -14,7 +14,7 @@ frameRate(60);
 ball = new Ball;
 }
 function draw(){
-	if(rapid){
+	/*if(rapid){
 	if(on){
 	fill(random(0, 255), random(0, 255), random(0,255));
 	ellipse(x, y, 100, 100);
@@ -32,11 +32,7 @@ function draw(){
 	else if (x < 0){
 	y += 50;
 	on = true;}
-	}
-
-	else
-	{
+	}*/
 		background(0);
 		ball.show(random(0, _width), random(0, _height), 300, 300, random(0, 255), random(0, 255), random(0, 255));
-	}
 }
