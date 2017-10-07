@@ -2,7 +2,7 @@
 var x= 0;
 var y = 0;
 var on = true;
-var rapid = false;
+var rapid = true;
 var alpha = 255;
 var ball;
 var _width = window.innerWidth;
@@ -36,7 +36,6 @@ function draw(){
 
 	else
 	{
-		clear();
 		background(0);
 		ball.show(random(0, _width), random(0, _height), 300, 300, random(0, 255), random(0, 255), random(0, 255));
 	}
