@@ -2,7 +2,7 @@
 var x= 0;
 var y = 0;
 var on = true;
-var rapid = true;
+var rapid = false;
 var alpha = 255;
 var ball;
 var _width = window.innerWidth;
