@@ -9,7 +9,7 @@ var _width = window.innerWidth;
 var _height = window.innerHeight;
 function setup()
 {
-createCanvas(_width, _height);
+createCanvas(_width - 5, _height - 5);
 frameRate(60);
 ball = new Ball;
 }
@@ -34,6 +34,7 @@ function draw(){
 	on = true;}
 	}
 	else{
-		background(0);
+		clear();
+		//background(0, 0, 0, 0);
 		ball.show(random(0, _width), random(0, _height), 300, 300, random(0, 255), random(0, 255), random(0, 255));
 }}
