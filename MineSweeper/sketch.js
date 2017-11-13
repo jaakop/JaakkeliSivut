@@ -6,7 +6,7 @@ function Make2DArray(cols, rows){
 	}
 	return arr;
 }
-
+var widht = window.innerWidth/3;
 var grid;
 var cols;
 var rows;
@@ -16,7 +16,10 @@ var totalBees = 20;
 
 function setup(){
 
-	createCanvas(201, 201);
+	var canvas = createCanvas(201, 201);
+	canvas.position(window.innerWidth/2 - 201/2, window.innerHeight / 8);
+	console.log(window.innerWidth);
+	console.log(window.innerWidth/2);
 	cols = floor(width / w);
 	rows = floor(height / w);
 	grid = Make2DArray(cols, rows);
