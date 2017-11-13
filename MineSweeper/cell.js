@@ -8,7 +8,8 @@ function Cell(i, j, w){
     this.neighborCount = 0;
 
     this.bee = false;
-	this.revealed = false;
+    this.revealed = false;
+    this.flag = false;
 }
 
 Cell.prototype.show = function(){
@@ -17,12 +18,14 @@ Cell.prototype.show = function(){
     rect(this.x, this.y, this.w, this.w);
 
     if(this.revealed){
+        if(!this.flag){
         if(this.bee){
             fill(255);
             rect(this.x, this.y, this.w, this.w);
             fill(127);
             ellipse(this.x + this.w * 0.5, this.y + this.w * 0.5, this.w * 0.5);
-        }else{
+        }
+        else{
             fill(255);
             rect(this.x, this.y, this.w, this.w);
             if(this.neighborCount > 0){
@@ -31,6 +34,14 @@ Cell.prototype.show = function(){
                 text(this.neighborCount, this.x + this.w * 0.5, this.y + this.w - 6);
             }
         }
+    }
+}
+    if(this.flag){
+        stroke(0);
+        fill(197);
+        rect(this.x, this.y, this.w, this.w);
+        fill(255)
+        ellipse(this.x + this.w * 0.5, this.y + this.w * 0.5, this.w * 0.5);
     }
 }
 
@@ -85,4 +96,11 @@ Cell.prototype.FloodFill = function(){
             }
         } 
     }    
+}
+
+Cell.prototype.PlaceAMarker = function(){
+    if(!this.flag)
+    this.flag = true;
+    else
+    this.flag = false;
 }

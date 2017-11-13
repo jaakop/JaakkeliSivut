@@ -12,6 +12,8 @@ var cols;
 var rows;
 var w = 20;
 
+var marker = false;
+
 var totalBees = 20;
 
 function setup(){
@@ -61,10 +63,16 @@ function mousePressed(){
 	for(var i = 0; i < cols; i++){
 		for(var j = 0; j < rows; j++){
 			if(grid[i][j].contains(mouseX, mouseY)){
+				if (marker){
+					grid[i][j].PlaceAMarker();
+				}
+				else{
+
 				grid[i][j].reveal();
 
 				if(grid[i][j].bee){
 					GameOver();
+					}
 				}
 			}
 		}	
@@ -79,6 +87,16 @@ function draw(){
 			grid[i][j].show();
 		}	
 	}
+	console.log(marker);
+}
+
+function keyPressed(){
+	if(keyIsDown(70))
+	marker = true;
+}
+function keyReleased(){
+	if(keyCode == 70)
+	marker = false;
 }
 
 function GameOver(){
