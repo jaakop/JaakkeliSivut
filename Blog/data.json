@@ -2,8 +2,12 @@
     "users":
     [
         {
-            "Name": "John",
-            "Age": "25"     
+            "name": "John",
+            "age": "25"     
+        },
+        {
+            "name": "Brad",
+            "age": "40"
         }
     ]
 }
