@@ -6,15 +6,23 @@ header{
     background-image: url("LordGaben.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center -100px;
+    border-radius: 0px 0px 100px 100px;
+    min-height: 60%;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 10%; 
+    max-height: 10%;
 }
 h1{
     padding-top: 4cm;
     color: white;
     font-size:calc(10px + 4vw);
     font-family: 'Press Start 2P';
-    text-shadow: 0 1px 0 #ccc,
+    text-shadow: 0 1px 0 #ccc,  
     0 2px 0 #c9c9c9,
     0 3px 0 #bbb,
     0 4px 0 #b9b9b9,
@@ -33,9 +41,17 @@ body{
     text-align: center;
 }
 div{
+    border-radius: 0px 50px 0px 50px;
     box-shadow: 5px 5px 20px black;
-    margin: 10px;
+    margin: 20px;
     padding: 20px;
     font-size: 30px;
     font-family: 'Berkshire Swash';
+}
+@media (max-width: 1000px) {
+
+    header {
+        background-size: 1000px 600px; /* Force the image to its minimum width */
+    }
+
 }
