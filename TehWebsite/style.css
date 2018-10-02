@@ -9,14 +9,7 @@ header{
     background-position: center -100px;
     border-radius: 0px 0px 100px 100px;
     min-height: 60%;
-}
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    max-width: 10%; 
-    max-height: 10%;
-}
+} 
 h1{
     padding-top: 4cm;
     color: white;

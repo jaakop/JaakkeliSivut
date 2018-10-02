@@ -7,14 +7,50 @@
     <header>
         <h1>Welcome to the WEBSITE</h1>
     </header>
-    <body>
-            <marquee direction="left" behavior="alternate"><div>
+    <body><div>
             <p style="font-size: 5vw; padding: 0px; margin: 0px;">Next Halloween Sale</p>
             <p style="padding: 0px; margin: 0px;">October 29 2018</p>
-        </div></marquee>
-        <marquee direction="right"><div><p><a href="http://s.team/p/kjw-dvbd/PRCGDVHN">want more friends :c</a></p></div></marquee>
-        <marquee direction="left"><div><p><a href="http://s.team/p/kjw-dvbd/PRCGDVHN">want more friends :c</a></p></div></marquee>
-        <marquee direction="right"><div><p><a href="http://s.team/p/kjw-dvbd/PRCGDVHN">want more friends :c</a></p></div></marquee>
-        <marquee direction="left"><div><p><a href="http://s.team/p/kjw-dvbd/PRCGDVHN">want more friends :c</a></p></div></marquee>
+            <p id="demo"></p>
+            <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 29, 2018 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+        </div>
+        <marquee direction="right" scrollamount="20"><div style="text-align: center;"><p><a href="http://s.team/p/kjw-dvbd/PRCGDVHN">want more friends plz</a><a id="emoji">😭</a></div></marquee>
+        <script>
+            var counter = 0;
+            setInterval(function(){
+                document.getElementById("emoji").innerHTML = document.getElementById("emoji").innerHTML + "😭";
+                 gconsole.log("Added an emoji");
+            }, 500);
+
+        </script>
+        
     </body>
 </html>
